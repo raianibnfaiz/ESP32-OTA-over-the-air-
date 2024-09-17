@@ -1,6 +1,9 @@
+#include <Arduino.h>
+
 #include <WiFi.h>
+
 #include <HTTPClient.h>
-#include <HTTPUpdate.h>
+#include <ESP32httpUpdate.h>  // Correct library for OTA updates
 
 const char* ssid = "BJIT_ADMIN";       // Your Wi-Fi SSID
 const char* password = "Bjit#@dmin";   // Your Wi-Fi Password
@@ -43,4 +46,3 @@ void setup() {
 void loop() {
   // Nothing to do in the loop
 }
-
