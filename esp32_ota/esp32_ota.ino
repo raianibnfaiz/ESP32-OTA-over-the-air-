@@ -5,10 +5,12 @@
 #include <HTTPClient.h>
 #include <ESP32httpUpdate.h>  // Correct library for OTA updates
 
-const char* ssid = "BJIT_ADMIN";       // Your Wi-Fi SSID
-const char* password = "Bjit#@dmin";   // Your Wi-Fi Password
+const char* ssid = "Raian";       // Your Wi-Fi SSID
+const char* password = "aaaaaaaa";   // Your Wi-Fi Password
 
-const char* firmwareURL = "http://your-server.com/firmware.bin"; // URL of the firmware file
+const char* firmwareURL = "https://raw.githubusercontent.com/raianibnfaiz/ESP32-OTA-over-the-air-/main/esp32_ota/fw.bin"; // URL of the firmware file
+
+const int LED_PIN = 4;
 
 void setup() {
   Serial.begin(115200);
@@ -45,4 +47,15 @@ void setup() {
 
 void loop() {
   // Nothing to do in the loop
+
+  digitalWrite(LED_PIN, HIGH);
+  
+  // Wait for one second
+  delay(1000);
+  
+  // Turn the LED off (LOW voltage level)
+  digitalWrite(LED_PIN, LOW);
+  
+  // Wait for one second before repeating the loop
+  delay(1000);
 }
