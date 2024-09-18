@@ -14,7 +14,7 @@ const int LED_PIN = 4;
 
 void setup() {
   Serial.begin(115200);
-
+  pinMode(LED_PIN, OUTPUT);
   // Connect to Wi-Fi
   WiFi.begin(ssid, password);
   Serial.println("Connecting to WiFi...");
@@ -47,15 +47,4 @@ void setup() {
 
 void loop() {
   // Nothing to do in the loop
-
-  digitalWrite(LED_PIN, HIGH);
-  
-  // Wait for one second
-  delay(1000);
-  
-  // Turn the LED off (LOW voltage level)
-  digitalWrite(LED_PIN, LOW);
-  
-  // Wait for one second before repeating the loop
-  delay(1000);
 }
